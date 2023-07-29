@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="date">
+    <button>get age</button>
+    <p id="pera"></p>
+
+    <script>
+        let inp = document.querySelector("input");
+        let btn = document.querySelector("button");
+        let pera = document.getElementById("pera")
+
+        btn.onclick = () => {
+
+        
+            let year1 = Number(inp.value.split("-")[0]);
+            let month1 = Number(inp.value.split("-")[1]);
+            let date1 = Number(inp.value.split("-")[2]);
+
+
+            let date = new Date();
+            let date2 = date.getDate()
+            let year2 = date.getFullYear();
+            let month2 = date.getMonth() + 1;
+
+            let x = year2 - year1;
+            let y = month2 - month1;
+            let z = date2 - date1;
+            pera.innerHTML = "You" + " " + "are" + " " + x + " " + "years" + " " + y + " " + "months" + " " + "and" + " " + z + " " + "days old"
+
+
+
+
+
+
+
+        }
+    </script>
+
+</body>
+
+</html>
